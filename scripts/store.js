@@ -11,7 +11,7 @@ const store = (function(){
   let searchTerm = '';
 
   function findById(id){
-  	items.find(x => x === id);
+  	return items.find(x => x === id);
   }
   
 
@@ -31,8 +31,10 @@ const store = (function(){
  } 
 
  function findAndDelete (id) {
-	const x = this.items.findIndex(findById(id));
-	this.items.splice(x,1);
+  const index = items.findIndex(item => item.id === id);
+  if (index >= 0) {
+    items.splice(index, 1);
+  }
  }
 
   return {
