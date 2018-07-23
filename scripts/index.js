@@ -9,6 +9,7 @@ $(document).ready(function() {
 });
 
 console.log(store);
-console.log(foo);
+console.log('empty item in here');
 console.log(Item);
+console.log('empty item before here');
 console.log(foo);
