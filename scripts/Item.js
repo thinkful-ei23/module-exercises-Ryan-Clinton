@@ -1,8 +1,8 @@
 'use strict';
+/* global cuid */
+/* eslint-disable no-unused-vars, no-console */
 
-const Item  = (function () {
-  const foo = 'bar';
-	
+const Item = (function () {
   function validateName(name) {
     if (name === '') {
       throw TypeError('Name does not exist.');
