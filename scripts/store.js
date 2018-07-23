@@ -20,7 +20,7 @@ const store = (function(){
   }
 
    function toggleCheckedFilter() {
-    hideCheckedItems = !hideCheckedItems;
+    this.hideCheckedItems = !this.hideCheckedItems;
   }
   
 
