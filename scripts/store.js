@@ -10,5 +10,7 @@ const store = (function(){
   let hideCheckedItems = false;
   let searchTerm = '';
   
-  return {items,hideCheckedItems,searchTerm};
+  return {
+    items, hideCheckedItems, searchTerm
+  };
 }() );
