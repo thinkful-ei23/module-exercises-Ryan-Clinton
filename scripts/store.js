@@ -11,14 +11,24 @@ const store = (function(){
   let searchTerm = '';
 
   function findById(id){
-  	return items.find(x => x === id);
+  	return items.find(x => x.id === id);
+  
+  }
+
+  function setSearchTerm(val) {
+   searchTerm = val;
+  }
+
+   function toggleCheckedFilter() {
+    hideCheckedItems = !hideCheckedItems;
   }
   
 
  function addItem(name){
- 	try{Item.validateName(name)}
-	catch(e){console.error(`cannot add item: ${e}`)}
+ 	try{Item.validateName(name);
 	items.push(Item.create(name));
+	}
+	catch(e){console.error(`cannot add item: ${e}`);}
  }
  function findAndToggleChecked(id){
 	findById(id).checked = !findById(id).checked;
@@ -38,7 +48,8 @@ const store = (function(){
  }
 
   return {
-    items, hideCheckedItems, searchTerm, findById, findAndDelete,findAndUpdateName,findAndToggleChecked, addItem
+    items, hideCheckedItems, searchTerm, findById, findAndDelete,findAndUpdateName,findAndToggleChecked, 
+    addItem, toggleCheckedFilter, setSearchTerm
   };
 }() );
 
