@@ -1,8 +1,6 @@
 'use strict';
-/* global shoppingList, cuid */
-
-// eslint-disable-next-line no-unused-vars
-
+/* global shoppingList, $ */
+/* eslint-disable no-unused-vars, no-console */
 
 $(document).ready(function() {
   shoppingList.bindEventListeners();
